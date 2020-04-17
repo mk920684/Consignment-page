@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#CEF6CE;
+            }
+            
+            table, th, td {
+  border: 1px solid black;
+  text-align:center;
+  font-size: 15px;
+}
+table{
+    float: right;
+}
+
+h1{
+    color:#08088A;
+    font-family: verdana;
+    text-align:center;
+}
+        </style>
+        
+    </head>
+    <body>
+        <h1>Air Cargo Service</h1>
+        <form id="Form">
+            <label name="accnumber">Customer Logistics Account Number</label>
+            <input type="text"  name="accnumber" placeholder="Enter the Unique ID" pattern="[a-zA-Z]{4}-[0-9]{3}" required><br>
+            <label name="mobile">Mobile</label>
+            <input type="text" name="mobile" pattern="[789][0-9]{9}]" required><br>
+            <label name="emailid">Email-ID</label>
+            <input type="text" name="emailid" required><br>
+            <label name="item">Item to be Shipped</label>
+             <input type="text" placeholder="Item Name" pattern="[a-zA-Z ]" required><br>
+             <label for="itemcat">Item Category</label>
+                <select name="itemtype">
+                <option name="itemtype" value="category">Electronics</option>
+                <option name="itemtype" value="category">Attires</option>
+                <option name="itemtype" value="category">Toys</option>
+                <option name="itemtype" value="category">Non Poisonous Food</option>
+
+                </select><br>
+                <label for="address" name="address">Shipment Address</label>
+              <textarea id="address" required></textarea><br>
+             <label for="location">Location</label>
+               <select name="location" id="category">
+                   <option name="location" id="category">London-1800</option>
+                   <option name="location" id="category">Singapore-1400</option>
+                   <option name="location" id="category">New York-3100</option>
+                   <option name="location" id="category">Mexico City-3300</option>
+                   <option name="location" id="category">Tokyo-2800</option>
+
+               </select><br>
+               <label for="weight">Weight in kilograms</label>
+               <input type="number" id="kilogramval" min="5" max="36" required><br>
+               <label for="servicetype">Service Type</label>
+               <input type="radio" id="type1" name="servicetype" value="Normal">
+               <label for="type1">Normal</label>
+               
+                <input type="radio" id="type2" name="servicetype" value="Express">
+               <label for="type2">Express</label>
+               
+                <input type="radio" id="type3" name="servicetype" value="Platinum">
+               <label for="type3">Platinum</label><br>
+               <input type="button" value="Book My Consignment" onclick="cost()">
+                 <input type="reset" value="Clear">
+
+<div id="res"></div>
+<script>
+function cost()
+{
+var a="hi all this is my first javascript page";
+document.getElementById("res").innerHTML=a;
+}
+</script>
+  <table class="table" id="costtable" >
+  <tr>
+    <th>Service Type</th>
+    <th>Weignt(in Kg)</th>
+    <th>Amount(per Kg)</th>
+
+  </tr>
+  <tr>
+    <td rowspan="3">Normal</td>
+    <td>5 to below 15</td>
+    <td>125</td>
+
+  </tr>
+  <tr>
+    <td>15 to 25</td>
+    <td>175</td>
+
+  </tr>
+    <tr>
+    <td>Above 25 to 36</td>
+    <td>200</td>
+
+  </tr>  
+  <tr>
+    <td rowspan="3">Express</td>
+    <td>5 to below 15</td>
+    <td>175</td>
+
+  </tr> 
+  <tr>
+    <td>15 to 25</td>
+    <td>225</td>
+
+  </tr> 
+  <tr>
+    <td>Above 25 to 36</td>
+    <td>250</td>
+
+  </tr> 
+  <tr>
+    <td rowspan="3">Platinum</td>
+    <td>5 to below 15</td>
+    <td>225</td>
+
+  </tr>  
+  <tr>
+    <td>15 to 25</td>
+    <td>375</td>
+
+  </tr>  
+  <tr>
+    <td>Above 25 to 36</td>
+    <td>400</td>
+
+  </tr>
+  
+</table>
+
+        </form>
+        
+    </body>
+</html>
